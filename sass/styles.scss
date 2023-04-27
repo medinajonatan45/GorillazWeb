@@ -313,11 +313,10 @@ $section-height-size:100vh;
     &-text--album-0{
         // background-color: $quaternary-color;
         margin-right: 6vw;
-        @include Flex-System(column, center,flex-end, 0, nowrap)
+        @include Flex-System(column, center,flex-end, 0, nowrap);
     }
     &-img--album-0{
         background-image: url(../img/background/gorillaz-1.png);
-        // background-image: url(../img/background/gorillaz-2.jpg);
         background-size: cover;
         background-position: center;
         @include Screen-width(720px){width: 90vw;}
@@ -340,6 +339,7 @@ $section-height-size:100vh;
 
         &--album-0{
             text-shadow: 0.1em -0.1em 1px $secundary-color;
+            @include Screen-width(720px){font-size: 2.1em;}
         }
     }
     &__ul{
@@ -501,6 +501,6 @@ $section-height-size:100vh;
 // Section Discography
 @media screen and (max-width:720px) {
     .section__album{
-        @include Grid-System(80vw ,45vh 45vh, 0);
+        @include Grid-System(80vw ,40vh 50vh, 0);
     }
 }

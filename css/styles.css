@@ -323,6 +323,11 @@
 .album-text__h2--album-0 {
   text-shadow: 0.1em -0.1em 1px #d40f60;
 }
+@media screen and (max-width: 720px) {
+  .album-text__h2--album-0 {
+    font-size: 2.1em;
+  }
+}
 .album-text__ul {
   text-align: right;
 }
@@ -500,7 +505,7 @@
   .section__album {
     display: grid;
     grid-template-columns: 80vw;
-    grid-template-rows: 45vh 45vh;
+    grid-template-rows: 40vh 50vh;
     grid-gap: 0;
   }
 }
