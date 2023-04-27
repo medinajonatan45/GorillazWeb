@@ -78,7 +78,6 @@
 }
 
 .section--head {
-  background-color: #005c81;
   background-image: url(../img/background/plastic_beach.png);
   background-position: center;
   background-size: cover;
@@ -96,7 +95,6 @@
 
 .section__head-info {
   overflow: hidden;
-  background-color: #368986;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -107,12 +105,10 @@
   height: 100vh;
 }
 .section__head-title {
-  background-color: #e79a32;
   width: 45vw;
   margin-left: 2em;
 }
 .section__head-img {
-  background-color: #f84339;
   bottom: 0em;
   right: 0em;
   position: absolute;
@@ -300,7 +296,7 @@
   flex-wrap: nowrap;
 }
 .section__album-img--album-0 {
-  background-image: url(../img/background/gorillaz-2.jpg);
+  background-image: url(../img/background/gorillaz-1.png);
   background-size: cover;
   background-position: center;
 }
@@ -367,6 +363,10 @@
 }
 .slide--album-6 {
   background-image: url(../img/background/mix-texture.jpg);
+  color: white;
+}
+.slide--album-7 {
+  background-image: url(../img/background/paint-texture.jpg);
   color: white;
 }
 

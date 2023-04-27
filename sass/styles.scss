@@ -117,7 +117,7 @@ $section-height-size:100vh;
 
 // Section: Head.................
 .section--head{
-    background-color: $primary-color;
+    // background-color: $primary-color;
     background-image: url(../img/background/plastic_beach.png);
     background-position: center;
     background-size: cover;
@@ -129,19 +129,19 @@ $section-height-size:100vh;
 .section__head{
     &-info{
         overflow: hidden;
-        background-color: #368986;
+        // background-color: #368986;
         @include Flex-System(row, space-between, center, 1em,nowrap );
         width: 100%;
         height: 100vh;
     }
     &-title{
-        background-color: $quaternary-color;
+        // background-color: $quaternary-color;
         width: 45vw;
         // width: 35em;
         margin-left: 2em;
     }
     &-img{
-        background-color: #f84339;
+        // background-color: #f84339;
         bottom: 0em;
         right: 0em;
         position: absolute;
@@ -316,7 +316,8 @@ $section-height-size:100vh;
         @include Flex-System(column, center,flex-end, 0, nowrap)
     }
     &-img--album-0{
-        background-image: url(../img/background/gorillaz-2.jpg);
+        background-image: url(../img/background/gorillaz-1.png);
+        // background-image: url(../img/background/gorillaz-2.jpg);
         background-size: cover;
         background-position: center;
         @include Screen-width(720px){width: 90vw;}
@@ -383,6 +384,10 @@ $section-height-size:100vh;
     }
     &--album-6{
         background-image: url(../img/background/mix-texture.jpg);
+        color: $secundary-text-color;
+    }
+    &--album-7{
+        background-image: url(../img/background/paint-texture.jpg);
         color: $secundary-text-color;
     }
 }
