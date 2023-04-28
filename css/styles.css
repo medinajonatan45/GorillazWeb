@@ -298,7 +298,6 @@
 .section__album-img--album-0 {
   background-image: url(../img/background/gorillaz-1.png);
   background-size: cover;
-  background-position: center;
 }
 @media screen and (max-width: 720px) {
   .section__album-img--album-0 {
@@ -419,6 +418,50 @@
 
 .section__container--gallery {
   background-color: rgb(255, 0, 0);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 15vh auto;
+  grid-gap: 0;
+}
+
+.section__gallery-title {
+  background-color: #8E2831;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.section__gallery-content {
+  background-color: #005c81;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+
+.gallery-figureBox {
+  height: 70vh;
+  cursor: zoom-in;
+}
+
+.gallery-figureBox.activo {
+  background-color: blueviolet;
+  height: 95%;
+  transform: translateY(-3em);
+  position: fixed;
+  transition: all 0.5s ease;
+  cursor: zoom-out;
+}
+
+.section__h2--gallery-title {
+  background-color: blue;
+  font-size: 3em;
+  margin: 0;
 }
 
 @media screen and (max-width: 720px) {
@@ -507,6 +550,19 @@
     grid-template-columns: 80vw;
     grid-template-rows: 40vh 50vh;
     grid-gap: 0;
+  }
+}
+@media screen and (max-width: 720px) {
+  .section__gallery-content {
+    width: 90vw;
+  }
+  .gallery-figureBox {
+    height: 55vh;
+    width: 90vw;
+    background-color: red;
+  }
+  .gallery-figureBox.activo {
+    height: 70%;
   }
 }
 

@@ -318,7 +318,7 @@ $section-height-size:100vh;
     &-img--album-0{
         background-image: url(../img/background/gorillaz-1.png);
         background-size: cover;
-        background-position: center;
+        // background-position:center;
         @include Screen-width(720px){width: 90vw;}
     }
 }
@@ -427,8 +427,39 @@ $section-height-size:100vh;
 }
 .section__container--gallery{
     background-color: rgb(255, 0, 0);
+    height: 100vh;
+    @include Grid-System(auto, 15vh auto, 0);
+}
+.section__gallery{
+    
+    &-title{
+        background-color: #8E2831;
+        @include Flex-System(row, flex-start, flex-end, 0, nowrap);
+    }
+    &-content{
+        background-color: $primary-color;
+        @include Flex-System(row, center, center, 0, nowrap);
+    }
+}
+.gallery-figureBox{
+    height: 70vh;
+    // width: 20em;
+    cursor:zoom-in;
 }
 
+.gallery-figureBox.activo{
+    background-color: blueviolet;
+    height: 95%;
+    transform:translateY(-3em);
+    position:fixed;
+    transition: all 0.5s ease;
+    cursor: zoom-out;
+}
+.section__h2--gallery-title{
+    background-color: blue;
+    font-size:3em;
+    margin: 0;
+}
 // Media___________________________________
 // Header Nav
 @media screen and (max-width:720px) {
@@ -502,5 +533,22 @@ $section-height-size:100vh;
 @media screen and (max-width:720px) {
     .section__album{
         @include Grid-System(80vw ,40vh 50vh, 0);
+    }
+}
+// Section Galllery
+@media screen and (max-width:720px) {
+    .section__gallery{
+        &-content{
+            width: 90vw;
+            // @include Flex-System(row, center, center, 0, nowrap);
+        }
+    }
+    .gallery-figureBox{
+        height: 55vh;
+        width: 90vw;
+        background-color: red;
+    }
+    .gallery-figureBox.activo{
+        height: 70%;
     }
 }
