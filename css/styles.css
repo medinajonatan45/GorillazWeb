@@ -261,6 +261,7 @@
 
 .section__container--discography {
   height: 100vh;
+  overflow: hidden;
 }
 
 .section__album {
@@ -268,7 +269,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
+  grid-template-rows: 100vh;
   grid-gap: 1em;
 }
 .section__album-img {
@@ -421,7 +422,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 15vh auto;
+  grid-template-rows: 15vh 85vh;
   grid-gap: 0;
 }
 
@@ -436,26 +437,77 @@
 }
 .section__gallery-content {
   background-color: #005c81;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 90% 10%;
+  grid-gap: 0;
+}
+.section__gallery-items {
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 0;
+}
+@media screen and (max-width: 720px) {
+  .section__gallery-items {
+    overflow-x: auto;
+  }
+}
+
+.gallery-figureBox__img {
+  height: 60vh;
+  width: 20em;
+  object-fit: scale-down;
+}
+
+.gallery-figureBox {
+  background-color: red;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  cursor: zoom-in;
+}
+.gallery-figureBox:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+.gallery-figureBox.activo {
+  background-color: rgba(31, 31, 31, 0.8);
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  transform: translateY(-1em);
+  position: absolute;
+  transition: all 0.5s ease;
+  cursor: zoom-out;
+  z-index: 9999;
+}
+
+.gallery-figureBox__img.activo {
+  transform: scale(1.5);
+  object-fit: scale-down;
+}
+
+.section__gallery-items.activo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0;
   flex-wrap: nowrap;
-}
-
-.gallery-figureBox {
-  height: 70vh;
-  cursor: zoom-in;
-}
-
-.gallery-figureBox.activo {
-  background-color: blueviolet;
-  height: 95%;
-  transform: translateY(-3em);
-  position: fixed;
   transition: all 0.5s ease;
-  cursor: zoom-out;
 }
 
 .section__h2--gallery-title {
@@ -556,13 +608,10 @@
   .section__gallery-content {
     width: 90vw;
   }
-  .gallery-figureBox {
-    height: 55vh;
-    width: 90vw;
-    background-color: red;
-  }
-  .gallery-figureBox.activo {
-    height: 70%;
+  .gallery-figureBox__img {
+    height: 60vh;
+    width: 16em;
+    object-fit: scale-down;
   }
 }
 

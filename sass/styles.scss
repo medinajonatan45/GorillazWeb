@@ -287,12 +287,13 @@ $section-height-size:100vh;
 }
 .section__container--discography{
     height: 100vh;
+    overflow: hidden;
 }
 .section__album{
     // background-color: $primary-color;
     margin:0 5vw 0 5vw;
     overflow: hidden;
-    @include Grid-System(50% 50%, auto, 1em);
+    @include Grid-System(50% 50%, 100vh, 1em);
 
     &-img{
         // background-color: blue;
@@ -428,38 +429,79 @@ $section-height-size:100vh;
 .section__container--gallery{
     background-color: rgb(255, 0, 0);
     height: 100vh;
-    @include Grid-System(auto, 15vh auto, 0);
+    @include Grid-System(auto, 15vh 85vh, 0);
 }
 .section__gallery{
-    
     &-title{
         background-color: #8E2831;
         @include Flex-System(row, flex-start, flex-end, 0, nowrap);
     }
     &-content{
         background-color: $primary-color;
-        @include Flex-System(row, center, center, 0, nowrap);
+        @include Grid-System(100%, 90% 10%, 0);
+    }
+    &-items{
+        background-color: greenyellow;
+        @include Flex-System(row, flex-start, flex-start, 0, nowrap);
+        scroll-behavior: smooth;
+        overflow-y: hidden;
+        @include Screen-width(720px){overflow-x: auto;}
+        overflow-x: hidden;
+        // width: 100vw;
+        // height: 70vh;
+        padding: 0;
     }
 }
-.gallery-figureBox{
-    height: 70vh;
-    // width: 20em;
-    cursor:zoom-in;
+
+.gallery-figureBox__img{
+    // height: 70vh;
+    height: 60vh;
+    width: 20em;
+    object-fit:scale-down;
 }
 
+.gallery-figureBox{
+    background-color: red;
+    transition: all 0.5s ease;
+    @include Flex-System(column, center, center, 0, nowrap);
+    cursor: zoom-in;
+
+    &:hover{
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+    }
+}
 .gallery-figureBox.activo{
-    background-color: blueviolet;
-    height: 95%;
-    transform:translateY(-3em);
-    position:fixed;
+    background-color: rgba(31, 31, 31, 0.8);
+    color: $secundary-text-color;
+    height: 100vh;
+    width: 100vw;
+    transform:translateY(-1em);
+    // transform: translateX(5em);
+    position:absolute;
     transition: all 0.5s ease;
     cursor: zoom-out;
+    z-index: 9999;
+}
+.gallery-figureBox__img.activo{
+    transform: scale(1.5);
+    object-fit:scale-down;
+}
+.section__gallery-items.activo{
+    @include Flex-System(row, center, center, 0, nowrap);
+    transition: all 0.5s ease;
 }
 .section__h2--gallery-title{
     background-color: blue;
     font-size:3em;
     margin: 0;
 }
+
+
+
+
+
+
 // Media___________________________________
 // Header Nav
 @media screen and (max-width:720px) {
@@ -543,12 +585,12 @@ $section-height-size:100vh;
             // @include Flex-System(row, center, center, 0, nowrap);
         }
     }
-    .gallery-figureBox{
-        height: 55vh;
-        width: 90vw;
-        background-color: red;
+    .gallery-figureBox__img{
+        height: 60vh;
+        width: 16em;
+        object-fit:scale-down;
     }
-    .gallery-figureBox.activo{
-        height: 70%;
-    }
+    // .gallery-figureBox.activo{
+    //     height: 70%;
+    // }
 }

@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/2e5a2a291a.js" crossorigin="anonymous"></script>
-    <!-- Nav.js -->
+    <!-- JS -->
     <script defer src="js/nav.js"></script>
+    <script defer src="js/animations.js"></script>
 
     <title>Gorillaz - Web Site</title>
 </head>
@@ -286,21 +287,48 @@
                     <h2 class="section__h2 section__h2--gallery-title">Gallery</h2>
                 </section>
                 <section class="section__gallery-content">
-                    <figure class="gallery-figureBox gallery-figureBox--figure-1">
-                        <img class="gallery-figureBox__img" src="img/gallery/img1_gallery.jpg" alt="Imagen 1" width="100%" height="100%">
-                    </figure>
-                    <figure class="gallery-figureBox gallery-figureBox--figure-2">
-                        <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 2" width="100%" height="100%">
-                    </figure>
-                    <figure class="gallery-figureBox gallery-figureBox--figure-3">
-                        <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 3" width="100%" height="100%">
-                    </figure>
-                    <figure class="gallery-figureBox gallery-figureBox--figure-3">
-                        <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 3" width="100%" height="100%">
-                    </figure>
-                    <figure class="gallery-figureBox gallery-figureBox--figure-3">
-                        <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 3" width="100%" height="100%">
-                    </figure>
+                    <div class="section__gallery-items">
+                        <figure class="gallery-figureBox gallery-figureBox--figure-1">
+                            <img class="gallery-figureBox__img" src="img/gallery/img1_gallery.jpg" alt="Imagen 1" width="100%" height="100%">
+                            <figcaption class="gallery-figureBox__figcaption">
+                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery-figureBox gallery-figureBox--figure-2">
+                            <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 2" width="100%" height="100%">
+                            <figcaption class="gallery-figureBox__figcaption">
+                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery-figureBox gallery-figureBox--figure-3">
+                            <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 3" width="100%" height="100%">
+                            <figcaption class="gallery-figureBox__figcaption">
+                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery-figureBox gallery-figureBox--figure-4">
+                            <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 4" width="100%" height="100%">
+                            <figcaption class="gallery-figureBox__figcaption">
+                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery-figureBox gallery-figureBox--figure-5">
+                            <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 5" width="100%" height="100%">
+                            <figcaption class="gallery-figureBox__figcaption">
+                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery-figureBox gallery-figureBox--figure-6">
+                            <img class="gallery-figureBox__img" src="img/gallery/img2_gallery.jpg" alt="Imagen 6" width="100%" height="100%">
+                            <figcaption class="gallery-figureBox__figcaption">
+                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="section__buttons-nav">
+                        <button class="section__button" id="button_back" type="button">Back</button>
+                        <button class="section__button" id="button_next" type="button">Next</button>
+                    </div>
                 </section>
             </div>
         </section>
