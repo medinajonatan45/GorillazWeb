@@ -426,11 +426,19 @@ $section-height-size:100vh;
 .section--box4{
     background-color: $quinary-color;
 }
-.section__container--gallery{
-    background-color: rgb(255, 0, 0);
-    height: 100vh;
-    @include Grid-System(auto, 15vh 85vh, 0);
+.section{
+    &__h2--gallery-title{
+        background-color: blue;
+        font-size:3em;
+        margin: 0;
+    }
+    &__container--gallery{
+        background-color: rgb(255, 0, 0);
+        height: 100vh;
+        @include Grid-System(auto, 15vh 85vh, 0);
+    }
 }
+
 .section__gallery{
     &-title{
         background-color: #8E2831;
@@ -452,14 +460,6 @@ $section-height-size:100vh;
         padding: 0;
     }
 }
-
-.gallery-figureBox__img{
-    // height: 70vh;
-    height: 60vh;
-    width: 20em;
-    object-fit:scale-down;
-}
-
 .gallery-figureBox{
     background-color: red;
     transition: all 0.5s ease;
@@ -470,9 +470,23 @@ $section-height-size:100vh;
         transform: scale(1.1);
         transition: all 0.5s ease;
     }
+    &__img{
+        // height: 70vh;
+        height: 60vh;
+        width: 20em;
+        object-fit:scale-down;
+    }
+    &__figcaption{
+        background-color: orange;
+    }
+    &__h3{
+        background-color: rebeccapurple;
+        margin: 0em;
+    }
 }
+
 .gallery-figureBox.activo{
-    background-color: rgba(31, 31, 31, 0.8);
+    background-color: rgba(31, 31, 31, 0.95);
     color: $secundary-text-color;
     height: 100vh;
     width: 100vw;
@@ -490,11 +504,6 @@ $section-height-size:100vh;
 .section__gallery-items.activo{
     @include Flex-System(row, center, center, 0, nowrap);
     transition: all 0.5s ease;
-}
-.section__h2--gallery-title{
-    background-color: blue;
-    font-size:3em;
-    margin: 0;
 }
 
 
