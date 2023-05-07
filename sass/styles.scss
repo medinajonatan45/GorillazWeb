@@ -437,6 +437,10 @@ $section-height-size:100vh;
         height: 100vh;
         @include Grid-System(auto, 15vh 85vh, 0);
     }
+    &__buttons-nav{
+        background-color: purple;
+        @include Flex-System(row, space-around, flex-start, nowrap, 0);
+    }
 }
 
 .section__gallery{
@@ -446,17 +450,16 @@ $section-height-size:100vh;
     }
     &-content{
         background-color: $primary-color;
-        @include Grid-System(100%, 90% 10%, 0);
+        @include Grid-System(100%, 85% 15%, 0);
     }
     &-items{
         background-color: greenyellow;
         @include Flex-System(row, flex-start, flex-start, 0, nowrap);
         scroll-behavior: smooth;
-        overflow-y: hidden;
-        @include Screen-width(720px){overflow-x: auto;}
+        overflow-y: auto;
+        @include Screen-width(480px){overflow-x: auto;}
         overflow-x: hidden;
-        // width: 100vw;
-        // height: 70vh;
+        // height: 95%;
         padding: 0;
     }
 }
@@ -498,7 +501,7 @@ $section-height-size:100vh;
     z-index: 9999;
 }
 .gallery-figureBox__img.activo{
-    transform: scale(1.5);
+    transform: scale(1.6);
     object-fit:scale-down;
 }
 .section__gallery-items.activo{

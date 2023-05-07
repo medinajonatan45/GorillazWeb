@@ -430,6 +430,15 @@
   grid-template-rows: 15vh 85vh;
   grid-gap: 0;
 }
+.section__buttons-nav {
+  background-color: purple;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: nowrap;
+  flex-wrap: 0;
+}
 
 .section__gallery-title {
   background-color: #8E2831;
@@ -444,7 +453,7 @@
   background-color: #005c81;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 90% 10%;
+  grid-template-rows: 85% 15%;
   grid-gap: 0;
 }
 .section__gallery-items {
@@ -456,11 +465,11 @@
   gap: 0;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
-  overflow-y: hidden;
+  overflow-y: auto;
   overflow-x: hidden;
   padding: 0;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 480px) {
   .section__gallery-items {
     overflow-x: auto;
   }
@@ -507,7 +516,7 @@
 }
 
 .gallery-figureBox__img.activo {
-  transform: scale(1.5);
+  transform: scale(1.6);
   object-fit: scale-down;
 }
 
