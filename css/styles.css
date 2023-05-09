@@ -14,7 +14,7 @@
   z-index: 999;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 10em auto;
+  grid-template-rows: 25vh auto;
   grid-gap: 0;
 }
 .header__logo {
@@ -156,7 +156,14 @@
 }
 
 .section__about-img {
+  text-align: center;
   background: linear-gradient(#8E2831, #000000);
+  overflow: hidden;
+}
+@media screen and (max-width: 720px) {
+  .section__about-img {
+    text-align: left;
+  }
 }
 .section__about-info {
   background-color: #E90832;
@@ -186,9 +193,15 @@
 }
 
 .section__img--about-img {
-  object-fit: scale-down;
-  width: 90vw;
+  width: auto;
+  height: 47vh;
   filter: drop-shadow(10px 1px 5px black);
+}
+@media screen and (max-width: 720px) {
+  .section__img--about-img {
+    object-fit: scale-down;
+    width: 90vw;
+  }
 }
 
 .section--box2 {
@@ -269,7 +282,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100vh;
+  grid-template-rows: 100%;
   grid-gap: 1em;
 }
 .section__album-img {
@@ -321,6 +334,7 @@
   text-shadow: 0.1em 0.1em 0.2em black;
 }
 .album-text__h2--album-0 {
+  font-size: 4em;
   text-shadow: 0.1em -0.1em 1px #d40f60;
 }
 @media screen and (max-width: 720px) {
@@ -438,6 +452,19 @@
   align-items: flex-start;
   gap: nowrap;
   flex-wrap: 0;
+}
+.section__button {
+  background-color: white;
+  font-size: 1em;
+  width: 3em;
+  height: 3em;
+  border-radius: 10em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.section__button:hover {
+  background-color: rgb(139, 139, 139);
+  transition: all 0.5s ease;
 }
 
 .section__gallery-title {
@@ -614,7 +641,7 @@
   .section__album {
     display: grid;
     grid-template-columns: 80vw;
-    grid-template-rows: 40vh 50vh;
+    grid-template-rows: 40vh 60vh;
     grid-gap: 0;
   }
 }

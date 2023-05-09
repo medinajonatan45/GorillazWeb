@@ -55,7 +55,7 @@ $section-height-size:100vh;
     width: 10vw;
     min-width: 2em;
     z-index: 999;
-    @include Grid-System(auto, 10em auto, 0);
+    @include Grid-System(auto, 25vh auto, 0);
 
     
     &__logo{
@@ -181,7 +181,10 @@ $section-height-size:100vh;
 }
 .section__about{
     &-img{
+        text-align: center;
+        @include Screen-width(720px){text-align: left;}
         background:linear-gradient(#8E2831, #000000);
+        overflow: hidden;
     }
     &-info{
         background-color: $senary-color;
@@ -210,8 +213,13 @@ $section-height-size:100vh;
     background-color: $quinary-color;
 }
 .section__img--about-img{
-    object-fit:scale-down;
-    width: 90vw;
+    // background-color: red;
+    width: auto;
+    height: 47vh;
+    @include Screen-width(720px){
+        object-fit:scale-down;
+        width: 90vw;
+    }
     filter: drop-shadow(10px 1px 5px black);
 }
 
@@ -293,7 +301,7 @@ $section-height-size:100vh;
     // background-color: $primary-color;
     margin:0 5vw 0 5vw;
     overflow: hidden;
-    @include Grid-System(50% 50%, 100vh, 1em);
+    @include Grid-System(50% 50%, 100%, 1em);
 
     &-img{
         // background-color: blue;
@@ -339,6 +347,7 @@ $section-height-size:100vh;
         text-shadow: 0.1em 0.1em 0.2em black;
 
         &--album-0{
+            font-size: 4em;
             text-shadow: 0.1em -0.1em 1px $secundary-color;
             @include Screen-width(720px){font-size: 2.1em;}
         }
@@ -440,6 +449,20 @@ $section-height-size:100vh;
     &__buttons-nav{
         background-color: purple;
         @include Flex-System(row, space-around, flex-start, nowrap, 0);
+    }
+    &__button{
+        background-color: white;
+        font-size: 1em;
+        width: 3em;
+        height: 3em;
+        border-radius: 10em;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        &:hover{
+            background-color: rgb(139, 139, 139);
+            transition: all 0.5s ease;
+        }
     }
 }
 
@@ -586,7 +609,7 @@ $section-height-size:100vh;
 // Section Discography
 @media screen and (max-width:720px) {
     .section__album{
-        @include Grid-System(80vw ,40vh 50vh, 0);
+        @include Grid-System(80vw ,40vh 60vh, 0);
     }
 }
 // Section Galllery
