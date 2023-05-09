@@ -217,6 +217,7 @@ $section-height-size:100vh;
     width: auto;
     height: 47vh;
     @include Screen-width(720px){
+        transform: translateY(1em);
         object-fit:scale-down;
         width: 90vw;
     }
@@ -473,7 +474,7 @@ $section-height-size:100vh;
     }
     &-content{
         background-color: $primary-color;
-        @include Grid-System(100%, 85% 15%, 0);
+        @include Grid-System(100%, 90% 10%, 0);
     }
     &-items{
         background-color: greenyellow;
@@ -497,16 +498,16 @@ $section-height-size:100vh;
         transition: all 0.5s ease;
     }
     &__img{
-        // height: 70vh;
         height: 60vh;
         width: 20em;
+        // width: 25vw;
         object-fit:scale-down;
     }
     &__figcaption{
         background-color: orange;
     }
     &__h3{
-        background-color: rebeccapurple;
+        // background-color: rebeccapurple;
         margin: 0em;
     }
 }
@@ -514,18 +515,30 @@ $section-height-size:100vh;
 .gallery-figureBox.activo{
     background-color: rgba(31, 31, 31, 0.95);
     color: $secundary-text-color;
-    height: 100vh;
+    height: 105vh;
     width: 100vw;
     transform:translateY(-1em);
     // transform: translateX(5em);
     position:absolute;
     transition: all 0.5s ease;
-    cursor: zoom-out;
+    cursor: default;
     z-index: 9999;
 }
-.gallery-figureBox__img.activo{
-    transform: scale(1.6);
+.gallery-figureBox__container{
+    background-color: yellow;
+    @include Flex-System(column, space-around, center, nowrap, 0);
+}
+.gallery-figureBox__container.activo{
+    transform: scale(1.45);
+    @include Screen-width(720px){transform: scale(1.3);}
     object-fit:scale-down;
+    transition: all 0.5s ease;
+    cursor:zoom-out;
+
+    // &:hover{
+    //     transition: all 0.5s ease;
+    //     transform: scale(1.55);
+    // }
 }
 .section__gallery-items.activo{
     @include Flex-System(row, center, center, 0, nowrap);
@@ -578,7 +591,6 @@ $section-height-size:100vh;
         }
         &-img{
             position: relative;
-            // right: 1em;
             width: 50vh;
             height: 79vh;
         }
@@ -617,7 +629,6 @@ $section-height-size:100vh;
     .section__gallery{
         &-content{
             width: 90vw;
-            // @include Flex-System(row, center, center, 0, nowrap);
         }
     }
     .gallery-figureBox__img{
@@ -625,7 +636,4 @@ $section-height-size:100vh;
         width: 16em;
         object-fit:scale-down;
     }
-    // .gallery-figureBox.activo{
-    //     height: 70%;
-    // }
 }
