@@ -250,48 +250,38 @@ $section-height-size:100vh;
     background-color: $tertiary-color;
 }
 .section__container--band{
-    @include Grid-System(50% 50%,50vh 50vh, 0)
+    @include Grid-System(50% 50%,50vh 50vh, 0em);
+    @include Screen-width(960px){ @include Grid-System(90vw, 25vh 25vh 25vh 25vh, 0);}
 }
 .section__background-filter{
     @include Flex-System(row-reverse, space-evenly, center, 0, nowrap);
     width: 100%;
     height: 100%;
-    
-    &--member-1{
-        background-color:#005c81bd;
-    }
-    &--member-2{
-        background-color:#368986c1;
-    }
-    &--member-3{
-        background-color:#d40f61b8;
-    }
-    &--member-4{
-        background-color:#e79932bc;
-    }
 }
 .section__background{
     @include Flex-System(row-reverse, space-evenly, center, 0, nowrap);
+    transition: all 1.5s ease;
 
-    &--member-1{
+    &--member-1.activo{
         background-image: url(../img/background/2D_background.png);
         background-size: cover;
         background-position: center;
         filter: drop-shadow(10px 10px 5px black);
     }
-    &--member-2{
+    &--member-2.activo{
         background-image: url(../img/background/murdoc-background.png);
         background-size: cover;
         background-position: center;
         filter: drop-shadow(10px 10px 5px black);
     }
-    &--member-3{
+    &--member-3.activo{
+        transition: all 1s ease;
         background-image: url(../img/background/noodle_background.png);
         background-size: cover;
         background-position: center;
         filter: drop-shadow(10px 10px 5px black);
     }
-    &--member-4{
+    &--member-4.activo{
         background-image: url(../img/background/russel_background.png);
         background-size: cover;
         background-position: center;
@@ -300,26 +290,49 @@ $section-height-size:100vh;
 }
 .section__member{
     overflow: hidden;
-    &--member-1{
-        background-color: $primary-color;
-    }
-    &--member-2{
-        background-color: $quinary-color;
-    }
-    &--member-3{
-        background-color: $secundary-color;
-    }
-    &--member-4{
-        background-color: $quaternary-color;
-    }
-    // @include Flex-System(row-reverse, space-evenly, center, 0, nowrap);
-}
-.section__member{
+
     &-name{
-        color: $secundary-text-color;
         // background-color: $senary-color;
         font-size: calc(1em + 1.5vw);
-        text-shadow: 5px 5px 5px black;
+    }
+    &--member-1{
+        background:linear-gradient($primary-color, white);
+    }
+    &--member-2{
+        background:linear-gradient($quinary-color, white);
+        @include Screen-width(960px){
+            box-shadow: 0em -1em 1em 0em white;
+            z-index: 99;
+        }
+    }
+    &--member-3{
+        background:linear-gradient(white, $secundary-color);
+        box-shadow: -1em -1em 1em 0em white;
+        z-index: 99;
+    }
+    &--member-4{
+        background:linear-gradient(white, $quaternary-color);
+        box-shadow: 1em -1em 1em 0em white;
+        @include Screen-width(960px){box-shadow: 0em -1em 1em 0em white;}
+        z-index: 99;
+    }
+}
+.section__h2{
+    &--member-1{
+        color: $secundary-text-color;
+        text-shadow: 5px 5px 5px $octonary-color;
+    }
+    &--member-2{
+        color: $primary-text-color;
+        text-shadow: 5px 5px 5px $secundary-text-color;
+    }
+    &--member-3{
+        color: $secundary-text-color;
+        text-shadow: 5px 5px 5px $octonary-color;
+    }
+    &--member-4{
+        color: $primary-text-color;
+        text-shadow: 5px 5px 5px $secundary-text-color;
     }
 }
 .section__img--member-photo{
@@ -328,6 +341,7 @@ $section-height-size:100vh;
     // margin-top: 0.5em;
     margin-top: 1vh;
     filter: drop-shadow(10px 5px 1px black);
+    @include Screen-width(960px){height: 24.5vh;}
 }
 
 
@@ -745,15 +759,6 @@ $section-height-size:100vh;
     }
     .section__about-info{
         @include Grid-System(80vw, 45% auto, 0)
-    }
-}
-// Section band
-@media screen and (max-width:960px) {
-    .section__container--band{
-        @include Grid-System(90vw, 25vh 25vh 25vh 25vh, 0)
-    }
-    .section__img--member-photo{
-        height: 24.5vh;
     }
 }
 // Section Discography

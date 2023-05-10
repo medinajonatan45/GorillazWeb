@@ -232,7 +232,15 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50vh 50vh;
-  grid-gap: 0;
+  grid-gap: 0em;
+}
+@media screen and (max-width: 960px) {
+  .section__container--band {
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    grid-gap: 0;
+  }
 }
 
 .section__background-filter {
@@ -245,18 +253,6 @@
   width: 100%;
   height: 100%;
 }
-.section__background-filter--member-1 {
-  background-color: rgba(0, 92, 129, 0.7411764706);
-}
-.section__background-filter--member-2 {
-  background-color: rgba(54, 137, 134, 0.7568627451);
-}
-.section__background-filter--member-3 {
-  background-color: rgba(212, 15, 97, 0.7215686275);
-}
-.section__background-filter--member-4 {
-  background-color: rgba(231, 153, 50, 0.737254902);
-}
 
 .section__background {
   display: flex;
@@ -265,26 +261,28 @@
   align-items: center;
   gap: 0;
   flex-wrap: nowrap;
+  transition: all 1.5s ease;
 }
-.section__background--member-1 {
+.section__background--member-1.activo {
   background-image: url(../img/background/2D_background.png);
   background-size: cover;
   background-position: center;
   filter: drop-shadow(10px 10px 5px black);
 }
-.section__background--member-2 {
+.section__background--member-2.activo {
   background-image: url(../img/background/murdoc-background.png);
   background-size: cover;
   background-position: center;
   filter: drop-shadow(10px 10px 5px black);
 }
-.section__background--member-3 {
+.section__background--member-3.activo {
+  transition: all 1s ease;
   background-image: url(../img/background/noodle_background.png);
   background-size: cover;
   background-position: center;
   filter: drop-shadow(10px 10px 5px black);
 }
-.section__background--member-4 {
+.section__background--member-4.activo {
   background-image: url(../img/background/russel_background.png);
   background-size: cover;
   background-position: center;
@@ -294,29 +292,63 @@
 .section__member {
   overflow: hidden;
 }
+.section__member-name {
+  font-size: calc(1em + 1.5vw);
+}
 .section__member--member-1 {
-  background-color: #005c81;
+  background: linear-gradient(#005c81, white);
 }
 .section__member--member-2 {
-  background-color: #368986;
+  background: linear-gradient(#368986, white);
+}
+@media screen and (max-width: 960px) {
+  .section__member--member-2 {
+    box-shadow: 0em -1em 1em 0em white;
+    z-index: 99;
+  }
 }
 .section__member--member-3 {
-  background-color: #d40f60;
+  background: linear-gradient(white, #d40f60);
+  box-shadow: -1em -1em 1em 0em white;
+  z-index: 99;
 }
 .section__member--member-4 {
-  background-color: #e79a32;
+  background: linear-gradient(white, #e79a32);
+  box-shadow: 1em -1em 1em 0em white;
+  z-index: 99;
+}
+@media screen and (max-width: 960px) {
+  .section__member--member-4 {
+    box-shadow: 0em -1em 1em 0em white;
+  }
 }
 
-.section__member-name {
+.section__h2--member-1 {
   color: white;
-  font-size: calc(1em + 1.5vw);
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 5px 5px 5px rgb(11, 11, 11);
+}
+.section__h2--member-2 {
+  color: black;
+  text-shadow: 5px 5px 5px white;
+}
+.section__h2--member-3 {
+  color: white;
+  text-shadow: 5px 5px 5px rgb(11, 11, 11);
+}
+.section__h2--member-4 {
+  color: black;
+  text-shadow: 5px 5px 5px white;
 }
 
 .section__img--member-photo {
   height: 49.5vh;
   margin-top: 1vh;
   filter: drop-shadow(10px 5px 1px black);
+}
+@media screen and (max-width: 960px) {
+  .section__img--member-photo {
+    height: 24.5vh;
+  }
 }
 
 .section--box3 {
@@ -842,17 +874,6 @@
     grid-template-columns: 80vw;
     grid-template-rows: 45% auto;
     grid-gap: 0;
-  }
-}
-@media screen and (max-width: 960px) {
-  .section__container--band {
-    display: grid;
-    grid-template-columns: 90vw;
-    grid-template-rows: 25vh 25vh 25vh 25vh;
-    grid-gap: 0;
-  }
-  .section__img--member-photo {
-    height: 24.5vh;
   }
 }
 @media screen and (max-width: 720px) {
