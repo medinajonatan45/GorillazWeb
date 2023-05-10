@@ -6,7 +6,7 @@
 }
 
 .header {
-  background-color: rgb(69, 10, 124);
+  background-color: rgb(11, 11, 11);
   position: fixed;
   height: 100%;
   width: 10vw;
@@ -14,23 +14,23 @@
   z-index: 999;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 25vh auto;
+  grid-template-rows: 20vh auto;
   grid-gap: 0;
 }
 .header__logo {
   object-fit: scale-down;
+  background-color: rgb(11, 11, 11);
   background-image: url(https://wallpapers.com/images/featured/3jjpqftwixza1iac.jpg);
   background-size: cover;
   background-position: center;
 }
 .header__button {
-  background-color: #e79a32;
+  background-color: rgb(24, 24, 24);
   color: white;
   display: none;
   border: none;
 }
 .header__svg {
-  background-color: #005c81;
   width: 100%;
   height: 2.5em;
 }
@@ -40,27 +40,40 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6vh;
+  gap: 0;
   flex-wrap: nowrap;
-  background-color: #E90832;
+  background-color: rgb(11, 11, 11);
   padding: 0;
   margin-top: 0;
   height: 100%;
 }
 .nav__li {
+  height: 10%;
+  width: 100%;
   list-style: none;
-  background-color: #e79a32;
   font-weight: bold;
 }
 .nav__a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
   color: white;
 }
 .nav__a:hover {
-  color: black;
+  background-color: #368986;
+}
+.nav__a:active {
+  background-color: #368986;
 }
 
 .main {
-  background-color: red;
+  background-color: #005c81;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -78,6 +91,7 @@
 }
 
 .section--head {
+  background-color: #005c81;
   background-image: url(../img/background/plastic_beach.png);
   background-position: center;
   background-size: cover;
@@ -117,15 +131,22 @@
 .section__head-icono {
   position: absolute;
   bottom: 0vh;
-  background-color: #d40f60;
   animation: icon-animation 1s ease infinite;
+  text-shadow: 5px 1px 5px black;
+  opacity: 0.6;
+}
+.section__head-icono:hover {
+  opacity: 1;
 }
 
+.section__img {
+  user-select: none;
+}
 .section__img--head-title {
   filter: drop-shadow(5px 5px 1px #d40f60);
 }
 .section__img--head-img {
-  filter: drop-shadow(3px 1px 5px #d40f60);
+  filter: drop-shadow(10px 10px 1px rgb(24, 24, 24));
 }
 
 .section__a--head-icono {
@@ -145,7 +166,7 @@
   }
 }
 .section--box1 {
-  background-color: #E90832;
+  background-color: black;
 }
 
 .section__container--about {
@@ -157,7 +178,7 @@
 
 .section__about-img {
   text-align: center;
-  background: linear-gradient(#8E2831, #000000);
+  background: linear-gradient(#E90832, #000000);
   overflow: hidden;
 }
 @media screen and (max-width: 720px) {
@@ -166,8 +187,9 @@
   }
 }
 .section__about-info {
-  background-color: #E90832;
+  box-shadow: 0em -1em 1em 0em black;
   z-index: 99;
+  padding: 5vh 0;
   margin: 0 9vw 0 1em;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -176,20 +198,17 @@
 }
 
 .section__info-text {
-  background-color: #005c81;
   color: white;
   text-align: center;
   font-size: 1em;
 }
 .section__info-list {
-  background-color: #e79a32;
   color: white;
   text-align: center;
 }
 
 .section__ul--info-list {
   padding-left: 0;
-  background-color: #368986;
 }
 
 .section__img--about-img {
@@ -216,6 +235,29 @@
   grid-gap: 0;
 }
 
+.section__background-filter {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+}
+.section__background-filter--member-1 {
+  background-color: rgba(0, 92, 129, 0.7411764706);
+}
+.section__background-filter--member-2 {
+  background-color: rgba(54, 137, 134, 0.7568627451);
+}
+.section__background-filter--member-3 {
+  background-color: rgba(212, 15, 97, 0.7215686275);
+}
+.section__background-filter--member-4 {
+  background-color: rgba(231, 153, 50, 0.737254902);
+}
+
 .section__background {
   display: flex;
   flex-direction: row-reverse;
@@ -225,20 +267,28 @@
   flex-wrap: nowrap;
 }
 .section__background--member-1 {
+  background-image: url(../img/background/2D_background.png);
   background-size: cover;
   background-position: center;
+  filter: drop-shadow(10px 10px 5px black);
 }
 .section__background--member-2 {
+  background-image: url(../img/background/murdoc-background.png);
   background-size: cover;
   background-position: center;
+  filter: drop-shadow(10px 10px 5px black);
 }
 .section__background--member-3 {
+  background-image: url(../img/background/noodle_background.png);
   background-size: cover;
   background-position: center;
+  filter: drop-shadow(10px 10px 5px black);
 }
 .section__background--member-4 {
+  background-image: url(../img/background/russel_background.png);
   background-size: cover;
   background-position: center;
+  filter: drop-shadow(10px 10px 5px black);
 }
 
 .section__member {
@@ -698,6 +748,15 @@
   }
   .header__button {
     display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+  .header__svg {
+    width: 7vw;
   }
   .nav {
     width: 0vw;
@@ -710,12 +769,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
-    flex-wrap: wrap;
+    gap: 1em;
+    flex-wrap: nowrap;
   }
   .nav__a {
     color: white;
-    font-size: 2em;
+    font-size: 1.3em;
   }
   .nav.activo {
     width: 100vw;
@@ -723,21 +782,48 @@
 }
 @media screen and (max-width: 960px) {
   .section__head-info {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 80vh;
+    grid-gap: 0;
+  }
+  .section__head-title {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 0;
     flex-wrap: nowrap;
-  }
-  .section__head-title {
-    width: 21em;
+    width: 100%;
+    height: 100%;
     margin-left: 0;
   }
   .section__head-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap;
     position: relative;
+  }
+  .section__img--head-title {
+    object-fit: scale-down;
+    width: 21em;
+  }
+  .section__img--head-img {
     width: 50vh;
     height: 79vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section__head-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap;
   }
 }
 @media screen and (max-width: 960px) {

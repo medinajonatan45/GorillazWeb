@@ -20,11 +20,12 @@
 </head>
 <body class="body">
     
+    <!-- Header: Nav -->
     <header class="header">
         <img class="header__logo" src="img/logo/bones-black.png" loading="lazy" alt="Gorillaz" width="100%" height="100%">
         <button class="header__button">
             <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
         </button>
         <nav class="nav">
@@ -40,6 +41,8 @@
     </header>
 
     <main id="fullpage" class="main">
+
+        <!-- Section 0: Head -->
         <section class="section section--head">
             <div class="section__container section__container--head">
                 <div class="section__head-info">
@@ -47,7 +50,7 @@
                         <img class="section__img section__img--head-title" loading="lazy" src="img/logo/gorillaz-black-edit.png" alt="Gorillaz Logo" width="100%" height="100%">
                     </section>
                     <section class="section__head-img">
-                        <img class="section__img section__img--head-img" loading="lazy" src="img/head/img_head-1.png" alt="Gorillaz" width="100%" height="100%">
+                        <img id="head__img" class="section__img section__img--head-img" loading="lazy" src="img/head/img_head-1.png" alt="Gorillaz" width="100%" height="100%">
                     </section>
                 </div>
                 <div class="section__head-icono">
@@ -60,6 +63,7 @@
             </div>
         </section>
         
+        <!-- Section 1: About -->
         <section class="section section--box1">
             <div class="section__container section__container--about">
                 <section class="section__about-img">
@@ -88,50 +92,62 @@
                 </section>
             </div>
         </section>
+
+        <!-- Section 2: Band -->
         <section class="section section--box2">
             <div class="section__container section__container--band">
                 <section class="section__member section__member--member-1">
                     <div class="section__background section__background--member-1">
-                        <div class="section__member-photo">
-                            <img class="section__img section__img--member-photo" src="img/band/2D_band.png" alt="2-D" width="100%" height="100%">
-                        </div>
-                        <div class="section__member-name">
-                            <h2>2-D</h2>
+                        <div class="section__background-filter section__background-filter--member-1">
+                            <div class="section__member-photo">
+                                <img class="section__img section__img--member-photo" src="img/band/2D_band.png" alt="2-D" width="100%" height="100%">
+                            </div>
+                            <div class="section__member-name">
+                                <h2>2-D</h2>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="section__member section__member--member-2">
                     <div class="section__background section__background--member-2">
-                        <div class="section__member-photo">
-                            <img class="section__img section__img--member-photo" src="img/band/murdoc_band.png" alt="Murdoc" width="100%" height="100%">
-                        </div>
-                        <div class="section__member-name">
-                            <h2>Murdoc</h2>
+                        <div class="section__background-filter section__background-filter--member-2">
+                            <div class="section__member-photo">
+                                <img class="section__img section__img--member-photo" src="img/band/murdoc_band.png" alt="Murdoc" width="100%" height="100%">
+                            </div>
+                            <div class="section__member-name">
+                                <h2>Murdoc</h2>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="section__member section__member--member-3">
                     <div class="section__background section__background--member-3">
-                        <div class="section__member-photo">
-                            <img class="section__img section__img--member-photo" src="img/band/noodle_band.png" alt="Noodle" width="100%" height="100%">
-                        </div>
-                        <div class="section__member-name">
-                            <h2>Noodle</h2>
+                        <div class="section__background-filter section__background-filter--member-3">
+                            <div class="section__member-photo">
+                                <img class="section__img section__img--member-photo" src="img/band/noodle_band.png" alt="Noodle" width="100%" height="100%">
+                            </div>
+                            <div class="section__member-name">
+                                <h2>Noodle</h2>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="section__member section__member--member-4">
                     <div class="section__background section__background--member-4">
-                        <div class="section__member-photo">
-                            <img class="section__img section__img--member-photo" src="img/band/russel_band.png" alt="Russel" width="100%" height="100%">
-                        </div>
-                        <div class="section__member-name">
-                            <h2>Russel</h2>
+                        <div class="section__background-filter section__background-filter--member-4">
+                            <div class="section__member-photo">
+                                <img class="section__img section__img--member-photo" src="img/band/russel_band.png" alt="Russel" width="100%" height="100%">
+                            </div>
+                            <div class="section__member-name">
+                                <h2>Russel</h2>
+                            </div>
                         </div>
                     </div>
                 </section>
             </div>
         </section>
+
+        <!-- Section 3: Discography -->
         <section class="section section--box3">
             <div class="section__container section__container--discography">
                 <div class="slide slide--album-0">
@@ -282,6 +298,8 @@
 
             </div>
         </section>
+
+        <!-- Section 4: Gallery -->
         <section class="section section--box4">
             <div class="section__container section__container--gallery">
                 <section class="section__gallery-title">
@@ -301,7 +319,7 @@
                             <div class="gallery-figureBox__container gallery-figureBox__container--figure-2">
                             <img class="gallery-figureBox__img gallery-figureBox__img--img2" src="img/gallery/img2_gallery.jpg" alt="Imagen 2" width="100%" height="100%">
                             <figcaption class="gallery-figureBox__figcaption">
-                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                                <h3 class="gallery-figureBox__h3">Plastic Beach</h3>
                             </figcaption>
                             </div>
                         </figure>
@@ -309,7 +327,7 @@
                             <div class="gallery-figureBox__container gallery-figureBox__container--figure-3">
                             <img class="gallery-figureBox__img gallery-figureBox__img--img3" src="img/gallery/img3_gallery.jpg" alt="Imagen 3" width="100%" height="100%">
                             <figcaption class="gallery-figureBox__figcaption">
-                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                                <h3 class="gallery-figureBox__h3">The Now Now</h3>
                             </figcaption>
                             </div>
                         </figure>
@@ -317,7 +335,7 @@
                              <div class="gallery-figureBox__container gallery-figureBox__container--figure-4">
                             <img class="gallery-figureBox__img gallery-figureBox__img--img4" src="img/gallery/img4_gallery.jpg" alt="Imagen 4" width="100%" height="100%">
                             <figcaption class="gallery-figureBox__figcaption">
-                                <h3 class="gallery-figureBox__h3">Noodle</h3>
+                                <h3 class="gallery-figureBox__h3">Meanwhile</h3>
                             </figcaption>
                             </div>
                         </figure>
@@ -378,6 +396,7 @@
             </div>
         </section>
 
+        <!-- Section 5: Footer -->
         <footer class="section footer">
             <div class="section__container">
                 <section class="footer__section footer__section--info">
@@ -397,6 +416,8 @@
                 <section class="footer__section footer__section--background"></section>
             </div>
         </footer>
+
+
     <!-- Fullpage.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.js"></script>
     <script src="js/app.js"></script>
