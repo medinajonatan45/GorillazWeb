@@ -455,16 +455,16 @@
   flex-wrap: 0;
 }
 .section__button {
-  background-color: white;
-  font-size: 1em;
-  width: 3em;
-  height: 3em;
+  color: white;
+  background-color: transparent;
+  font-size: 2.5em;
+  border: 0em solid;
   border-radius: 10em;
   cursor: pointer;
   transition: all 0.5s ease;
 }
 .section__button:hover {
-  background-color: rgb(139, 139, 139);
+  opacity: 0.5;
   transition: all 0.5s ease;
 }
 
@@ -489,7 +489,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 0;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
@@ -548,12 +548,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: nowrap;
-  flex-wrap: 0;
+  gap: 0;
+  flex-wrap: nowrap;
 }
 
 .gallery-figureBox__container.activo {
-  transform: scale(1.45);
+  transform: scale(1.5);
   object-fit: scale-down;
   transition: all 0.5s ease;
   cursor: zoom-out;
@@ -574,6 +574,121 @@
   transition: all 0.5s ease;
 }
 
+.footer {
+  background-color: rgb(24, 24, 24);
+}
+
+.footer__section {
+  overflow: hidden;
+}
+.footer__section--info {
+  height: 35vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 30%;
+  grid-gap: 0;
+}
+@media screen and (max-width: 720px) {
+  .footer__section--info {
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 70% 30%;
+    grid-gap: 0;
+  }
+}
+.footer__section--background {
+  height: 65vh;
+  background-image: url(../img/background/gorillaz_baby-queen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.footer__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.footer__title {
+  background-color: rgb(11, 11, 11);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+
+.footer__ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: nowrap;
+}
+.footer__li {
+  list-style: none;
+}
+.footer__a {
+  color: white;
+  text-decoration: none;
+}
+.footer__a--links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  background-color: rgb(11, 11, 11);
+  height: 1.5em;
+  width: 1.5em;
+  font-size: 2em;
+  transition: all 0.5s ease;
+  animation-name: animation_background_links;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+}
+.footer__a--links:hover {
+  transition: all 0.5s ease;
+  transform: translateY(-0.5em);
+}
+.footer__a--jonatan {
+  font-size: 1em;
+  font-style: italic;
+}
+
+@keyframes animation_background_links {
+  100% {
+    color: #005c81;
+    border: 2px solid #005c81;
+  }
+  80% {
+    color: #d40f60;
+    border: 2px solid #d40f60;
+  }
+  60% {
+    color: #f84339;
+    border: 2px solid #f84339;
+  }
+  40% {
+    color: #e79a32;
+    border: 2px solid #e79a32;
+  }
+  20% {
+    color: #368986;
+    border: 2px solid #368986;
+  }
+  0% {
+    color: #E90832;
+    border: 2px solid #E90832;
+  }
+}
 @media screen and (max-width: 720px) {
   .header {
     display: grid;

@@ -12,7 +12,7 @@ const seccionesPagina = new fullpage('#fullpage',{
 
     navigation: true, // Muesta la barra de navegación.
     menu: '#menu', // Menu de navegación.
-    anchors: ['home', 'about', 'band', 'discography', 'gallery'], // Anclas, las usamos para identificar cada seccion y poder acceder a ellas con el menu.
+    anchors: ['home', 'about', 'band', 'discography', 'gallery', 'link'], // Anclas, las usamos para identificar cada seccion y poder acceder a ellas con el menu.
     // navigationTooltips: ['Home', 'About', 'Discography', 'Gallery', 'Links'], // Tooltips que mostrara por cada boton.
     showActiveTooltip: false, // Mostrar tooltip activa.
 });

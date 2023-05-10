@@ -6,6 +6,8 @@ $tertiary-color:#f84339;
 $quaternary-color:#e79a32;
 $quinary-color:#368986;
 $senary-color:#E90832;
+$septenary-color:rgb(24, 24, 24);
+$octonary-color:rgb(11, 11, 11);
 
 // **** Text ****
 $primary-text-color:black;
@@ -370,7 +372,7 @@ $section-height-size:100vh;
     background-position: center;
 
     &--album-0{
-        background-color: rgb(24, 24, 24);
+        background-color: $septenary-color;
         color: $secundary-text-color;
     }
     &--album-1{
@@ -452,16 +454,18 @@ $section-height-size:100vh;
         @include Flex-System(row, space-around, flex-start, nowrap, 0);
     }
     &__button{
-        background-color: white;
-        font-size: 1em;
-        width: 3em;
-        height: 3em;
+        color: $secundary-text-color;
+        background-color: transparent;
+        font-size: 2.5em;
+        // width: 3em;
+        // height: 3em;
+        border: 0em solid;
         border-radius: 10em;
         cursor: pointer;
         transition: all 0.5s ease;
 
         &:hover{
-            background-color: rgb(139, 139, 139);
+            opacity: 0.5;
             transition: all 0.5s ease;
         }
     }
@@ -478,7 +482,7 @@ $section-height-size:100vh;
     }
     &-items{
         background-color: greenyellow;
-        @include Flex-System(row, flex-start, flex-start, 0, nowrap);
+        @include Flex-System(row, flex-start, center, 0, nowrap);
         scroll-behavior: smooth;
         overflow-y: auto;
         @include Screen-width(480px){overflow-x: auto;}
@@ -526,10 +530,10 @@ $section-height-size:100vh;
 }
 .gallery-figureBox__container{
     background-color: yellow;
-    @include Flex-System(column, space-around, center, nowrap, 0);
+    @include Flex-System(column, space-around, center, 0, nowrap);
 }
 .gallery-figureBox__container.activo{
-    transform: scale(1.45);
+    transform: scale(1.5);
     @include Screen-width(720px){transform: scale(1.3);}
     object-fit:scale-down;
     transition: all 0.5s ease;
@@ -546,9 +550,81 @@ $section-height-size:100vh;
 }
 
 
+// Section Box 4: Footer .................
+.footer{
+    background-color: $septenary-color;
+}
+.footer__section{
+    overflow: hidden;
+    &--info{
+        height: 35vh;
+        // background-color: greenyellow;
+        @include Grid-System(100%, 70% 30%, 0);
+        @include Screen-width(720px){@include Grid-System(90vw, 70% 30%, 0);}
+    }
+    &--background{
+        height: 65vh;
+        // background-color: rebeccapurple;
+        background-image: url(../img/background/gorillaz_baby-queen.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:top;
+    }
+}
+.footer{
+    &__items{
+        // background-color: rosybrown;
+        @include Flex-System(row, center, center, 0, nowrap);
+    }
+    &__title{
+        background-color: $octonary-color;
+        @include Flex-System(row, center, center, 0, nowrap);
+    }
+}
+.footer{
+    &__ul{
+        padding: 0;
+        // background-color: greenyellow;
+        @include Flex-System(row, center, center, 1em, nowrap);
+    }
+    &__li{
+        list-style: none;
+    }
+    &__a{
+        color: $secundary-text-color;
+        text-decoration: none;
+    }
+    &__a--links{
+        @include Flex-System(row, center, center, 0, nowrap);
+        background-color: $octonary-color;
+        height: 1.5em;
+        width: 1.5em;
+        font-size: 2em;
+        transition: all 0.5s ease;
 
+        animation-name: animation_background_links;
+        animation-duration: 13s;
+        animation-iteration-count: infinite;
 
+        &:hover{
+            transition: all 0.5s ease;
+            transform:translateY(-0.5em);
+        }
+    }
+    &__a--jonatan{
+        font-size: 1em;
+        font-style: italic;
+    }
+}
 
+@keyframes animation_background_links {
+    100%{color: $primary-color; border: 2px solid $primary-color;}
+    80%{color: $secundary-color; border: 2px solid $secundary-color;}
+    60%{color: $tertiary-color; border: 2px solid $tertiary-color;}
+    40%{color: $quaternary-color; border: 2px solid $quaternary-color;}
+    20%{color: $quinary-color; border: 2px solid $quinary-color;}
+    0%{color: $senary-color; border: 2px solid $senary-color;}
+}
 
 // Media___________________________________
 // Header Nav
@@ -583,7 +659,7 @@ $section-height-size:100vh;
 @media screen and (max-width:960px) {
     .section__head{
         &-info{
-            @include Flex-System(column, space-around, center, 0,nowrap )
+            @include Flex-System(column, space-around, center, 0, nowrap)
         }
         &-title{
             width: 21em;
@@ -624,7 +700,7 @@ $section-height-size:100vh;
         @include Grid-System(80vw ,40vh 60vh, 0);
     }
 }
-// Section Galllery
+// Section Gallery
 @media screen and (max-width:720px) {
     .section__gallery{
         &-content{
