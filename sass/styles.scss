@@ -59,13 +59,27 @@ $section-height-size:100vh;
     z-index: 999;
     @include Grid-System(auto, 20vh auto, 0);
 
-    
     &__logo{
-        object-fit: scale-down;
         background-color: $octonary-color;
-        background-image: url(https://wallpapers.com/images/featured/3jjpqftwixza1iac.jpg);
+        background-image: url(../img/background/forest.jpg);
         background-size: cover;
         background-position: center;
+    }
+    &__background{
+        height: 100%;
+        background-color: $octonary-color;
+        @include Flex-System(row, center, center, 0, nowrap);
+        @include Screen-width(720px){background-color: rgba(0, 0, 0, 0.7);}
+    }
+    &__img{
+        object-fit: scale-down;
+        width: 70%;
+        transition: all 0.5s ease;
+        
+        &:hover{
+            transition: all 0.5s ease;
+            scale: 1.2;
+        }
     }
     &__button{
         background-color: $septenary-color;
@@ -146,12 +160,14 @@ $section-height-size:100vh;
         height: 100vh;
     }
     &-title{
+        user-select: none;
         // background-color: $quaternary-color;
         width: 45vw;
-        // width: 35em;
         margin-left: 2em;
+        filter: drop-shadow(5em 0em 1em $secundary-color);
     }
     &-img{
+        user-select: none;
         // background-color: #f84339;
         bottom: 0em;
         right: 0em;
@@ -197,6 +213,7 @@ $section-height-size:100vh;
 }
 .section__container--about{
     @include Grid-System(auto, 45vh 55vh, 0);
+    @include Screen-width(960px){@include Grid-System(auto, 35vh 65vh, 0)}
 }
 .section__about{
     &-img{
@@ -207,31 +224,35 @@ $section-height-size:100vh;
     }
     &-info{
         // background-color: red;
+        width: 97%;
         box-shadow: 0em -1em 1em 0em black;
         z-index: 99;
         padding: 5vh 0;
         margin: 0 9vw 0 1em;
-        @include Grid-System(50% 50%, auto, 0);
+        @include Screen-width(960px){width: auto;}
+        @include Grid-System(50% auto, auto, 1em);
+        @include Screen-width(960px){@include Grid-System(80vw, 55% auto, 1em);}
     }
 }
 .section__info{
     &-text{
-        // background-color: $primary-color;
+        padding: 0 1em;
+        // background-color:$primary-color;
         color: $secundary-text-color;
         text-align: center;
-        font-size:1em;
-        
+        // border: 0.5em dotted $senary-color;
     }
     &-list{
-        // background-color: $quaternary-color;
+        // background-color:$senary-color;
         color: $secundary-text-color;
         text-align: center;
-        // font-size:calc(0.5em + 1.5vw);
+        // border: 0.5em dotted $senary-color;
     }
 }
 .section__ul--info-list{
     padding-left: 0;
     // background-color: $quinary-color;
+    @include Flex-System(column, center, center, 0.2em, nowrap);
 }
 .section__img--about-img{
     width: auto;
@@ -243,7 +264,6 @@ $section-height-size:100vh;
     }
     filter: drop-shadow(10px 1px 5px black);
 }
-
 
 // Section Box 2: Band.................
 .section--box2{
@@ -260,29 +280,28 @@ $section-height-size:100vh;
 }
 .section__background{
     @include Flex-System(row-reverse, space-evenly, center, 0, nowrap);
-    transition: all 1.5s ease;
+    transition: all 1s ease;
 
-    &--member-1.activo{
+    &--member-1:hover{
         background-image: url(../img/background/2D_background.png);
         background-size: cover;
         background-position: center;
         filter: drop-shadow(10px 10px 5px black);
     }
-    &--member-2.activo{
+    &--member-2:hover{
         background-image: url(../img/background/murdoc-background.png);
         background-size: cover;
         background-position: center;
         filter: drop-shadow(10px 10px 5px black);
     }
-    &--member-3.activo{
-        transition: all 1s ease;
+    &--member-3:hover{
         background-image: url(../img/background/noodle_background.png);
         background-size: cover;
         background-position: center;
         filter: drop-shadow(10px 10px 5px black);
     }
-    &--member-4.activo{
-        background-image: url(../img/background/russel_background.png);
+    &--member-4:hover{
+        background-image: url(../img/background/russel_background-2.png);
         background-size: cover;
         background-position: center;
         filter: drop-shadow(10px 10px 5px black);
@@ -338,7 +357,6 @@ $section-height-size:100vh;
 .section__img--member-photo{
     // object-fit: scale-down;
     height: 49.5vh;
-    // margin-top: 0.5em;
     margin-top: 1vh;
     filter: drop-shadow(10px 5px 1px black);
     @include Screen-width(960px){height: 24.5vh;}
@@ -489,52 +507,58 @@ $section-height-size:100vh;
 
 // Section Box 4: Gallery.................
 .section--box4{
-    background-color: $quinary-color;
+    background-color: $primary-color;
+    background-image: url(../img/background/apartment.jpg);
+    background-position: center;
+    background-size: cover;
 }
 .section{
     &__h2--gallery-title{
-        background-color: blue;
+        // background-color: $quinary-color;
+        color: $secundary-text-color;
         font-size:3em;
-        margin: 0;
+        margin: 0.1em 1em;
+        text-shadow: 5px -5px 1px $primary-color;
     }
     &__container--gallery{
-        background-color: rgb(255, 0, 0);
+        background-color: rgba(0, 0, 0, 0.7);
         height: 100vh;
         @include Grid-System(auto, 15vh 85vh, 0);
     }
     &__buttons-nav{
-        background-color: purple;
+        // background-color: purple;
         @include Flex-System(row, space-around, flex-start, nowrap, 0);
     }
     &__button{
-        color: $secundary-text-color;
-        background-color: transparent;
+        color: $secundary-color;
+        // background-color: transparent;
+        background-color: $octonary-color;
         font-size: 2.5em;
-        // width: 3em;
-        // height: 3em;
-        border: 0em solid;
-        border-radius: 10em;
+        border: 0;
         cursor: pointer;
         transition: all 0.5s ease;
 
         &:hover{
             opacity: 0.5;
             transition: all 0.5s ease;
+            color: $octonary-color;
+            background-color: $secundary-color;
         }
     }
 }
 
 .section__gallery{
     &-title{
-        background-color: #8E2831;
+        background-color: $octonary-color;
         @include Flex-System(row, flex-start, flex-end, 0, nowrap);
     }
     &-content{
-        background-color: $primary-color;
+        // background-color: $primary-color;
         @include Grid-System(100%, 90% 10%, 0);
     }
     &-items{
-        background-color: greenyellow;
+        user-select: none;
+        // background-color: $tertiary-color;
         @include Flex-System(row, flex-start, center, 0, nowrap);
         scroll-behavior: smooth;
         overflow-y: auto;
@@ -545,7 +569,7 @@ $section-height-size:100vh;
     }
 }
 .gallery-figureBox{
-    background-color: red;
+    // background-color: red;
     transition: all 0.5s ease;
     @include Flex-System(column, center, center, 0, nowrap);
     cursor: zoom-in;
@@ -557,21 +581,21 @@ $section-height-size:100vh;
     &__img{
         height: 60vh;
         width: 20em;
-        // width: 25vw;
         object-fit:scale-down;
     }
     &__figcaption{
-        background-color: orange;
+        padding: 0.5em;
+        // background-color: orange;
     }
     &__h3{
         // background-color: rebeccapurple;
         margin: 0em;
+        color: $secundary-text-color;
     }
 }
 
 .gallery-figureBox.activo{
-    background-color: rgba(31, 31, 31, 0.95);
-    color: $secundary-text-color;
+    background-color: rgba(0, 0, 0, 0.95);
     height: 105vh;
     width: 100vw;
     transform:translateY(-1em);
@@ -582,7 +606,7 @@ $section-height-size:100vh;
     z-index: 9999;
 }
 .gallery-figureBox__container{
-    background-color: yellow;
+    // background-color: yellow;
     @include Flex-System(column, space-around, center, 0, nowrap);
 }
 .gallery-figureBox__container.activo{
@@ -591,11 +615,6 @@ $section-height-size:100vh;
     object-fit:scale-down;
     transition: all 0.5s ease;
     cursor:zoom-out;
-
-    // &:hover{
-    //     transition: all 0.5s ease;
-    //     transform: scale(1.55);
-    // }
 }
 .section__gallery-items.activo{
     @include Flex-System(row, center, center, 0, nowrap);
@@ -745,20 +764,6 @@ $section-height-size:100vh;
         &-title{
             @include Flex-System(row, flex-start, center, 0, nowrap);
         }
-    }
-}
-
-// Section about
-@media screen and (max-width:960px) {
-    .section__container--about{
-        @include Grid-System(auto, 35vh 65vh, 0)
-    }
-    .section__img--about-img{
-        object-fit:scale-down;
-        height: 45vh;
-    }
-    .section__about-info{
-        @include Grid-System(80vw, 45% auto, 0)
     }
 }
 // Section Discography
