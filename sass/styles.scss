@@ -83,6 +83,7 @@ $section-height-size:100vh;
         width: 85%;
         height: 100%;
         transition: all 0.5s ease;
+        @include Screen-width(720px){width: 50%;}
         
         &:hover{
             transition: all 0.5s ease;
@@ -177,13 +178,13 @@ $section-height-size:100vh;
         // background-color: $quaternary-color;
         width: 45vw;
         margin-left: 2em;
-        filter: drop-shadow(5em 0em 1em $secundary-color);
+        filter: drop-shadow(5em 0em 1em $secundary-text-color);
         transition: all 0.5s ease;
 
         &:hover{
             transition: all 0.5s ease;
             scale: 1.1;
-            filter: drop-shadow(5em 0em 1em $quinary-color);
+            filter: drop-shadow(5em 0em 1em $secundary-color);
         }
     }
     &-img{
@@ -195,15 +196,18 @@ $section-height-size:100vh;
         height: 100%;
     }
     &-icono{
+        user-select: none;
         position: absolute;
         bottom: 0vh;
-        // background-color: #d40f60;
+        // background-color: $septenary-color;
         animation: icon-animation 1s ease infinite;
-        text-shadow: 5px 1px 5px black;
-        opacity: 0.6;
+        transition: all 0.5s ease;
+        text-shadow: 1px 2px 3px black;
 
         &:hover{
-            opacity:1.0;
+            transition: all 0.5s ease;
+            opacity:0.8;
+            // background-color: $secundary-color;
         }
     }
 }
@@ -215,17 +219,20 @@ $section-height-size:100vh;
 
         &:hover{
             transition: all 0.5s ease;
-            filter: drop-shadow(5px 5px 1px $quinary-color);
+            filter: drop-shadow(5px 5px 1px $secundary-color);
         }
     }
     &--head-img{
-        // filter: drop-shadow(3px 1px 5px $primary-color);
         filter: drop-shadow(10px 10px 1px $septenary-color);
     }
 }
 .section__a--head-icono{
     font-size: 2em;
-    color: $secundary-text-color;
+    color: $secundary-color;
+
+    &:hover{
+        color: $septenary-color;
+    }
 }
 @keyframes icon-animation {
     0%{transform: translateY(20px);}
@@ -256,23 +263,36 @@ $section-height-size:100vh;
         padding: 5vh 0;
         margin: 0 9vw 0 1em;
         @include Screen-width(960px){width: auto;}
-        @include Grid-System(50% auto, auto, 1em);
+        @include Grid-System(50% auto, auto, 5vw);
         @include Screen-width(960px){@include Grid-System(80vw, 55% auto, 1em);}
     }
 }
 .section__info{
+    
     &-text{
         padding: 0 1em;
-        // background-color:$primary-color;
+        background-color:$primary-color;
         color: $secundary-text-color;
         text-align: center;
-        // border: 0.5em dotted $senary-color;
+        box-shadow: 1em -1em 1px 0em #005c8179;
+        transition: all 0.5s ease;
+        
+        &:hover{
+            transition: all 0.5s ease;
+            box-shadow: 0em 0em 0px 0em #005c8179;
+        }
     }
     &-list{
-        // background-color:$senary-color;
+        background-color:$senary-color;
         color: $secundary-text-color;
         text-align: center;
-        // border: 0.5em dotted $senary-color;
+        box-shadow: 1em -1em 1px 0em #E90832a9;
+        transition: all 0.5s ease;
+
+        &:hover{
+            transition: all 0.5s ease;
+            box-shadow: 0em 0em 1px 0em #E90832a9;
+        }
     }
 }
 .section__ul--info-list{
@@ -413,6 +433,19 @@ $section-height-size:100vh;
     }
 }
 .section__album{
+    &-background--album-0{
+        text-align: center;
+        @include Flex-System(column, center, center, 0, wrap);
+        width: 100%;
+        height: 100%;
+        transform: translateX(-35em);
+        transition: all 1s ease;
+    }
+    &-background--album-0.activo{
+        transform: translateX(0em);
+        background-color: #d40f61ef;
+        transition: all 1s ease;
+    }
     &--album-0{
         height: 100vh;
         margin:0;
@@ -429,6 +462,7 @@ $section-height-size:100vh;
         background-size: cover;
         // background-position:center;
         @include Screen-width(720px){width: 90vw;}
+        padding: 0em;
     }
 }
 .section__img--album{
@@ -555,7 +589,7 @@ $section-height-size:100vh;
         margin: 0.1em 1em;
     }
     &__container--gallery{
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.85);
         height: 100vh;
         @include Grid-System(auto, 15vh 85vh, 0);
     }
@@ -722,6 +756,10 @@ $section-height-size:100vh;
             animation-iteration-count: infinite;
     
             &:hover{
+                transition: all 0.5s ease;
+                transform:translateY(-0.5em);
+            }
+            &:active{
                 transition: all 0.5s ease;
                 transform:translateY(-0.5em);
             }
