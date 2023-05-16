@@ -5,6 +5,16 @@
   font-family: arial;
 }
 
+* h2::selection, * li::selection {
+  background-color: #d40f60;
+  color: white;
+}
+
+* a::selection, * p::selection {
+  background-color: #e79a32;
+  color: white;
+}
+
 .header {
   background-color: rgb(11, 11, 11);
   position: fixed;
@@ -52,6 +62,7 @@
   width: 85%;
   height: 100%;
   transition: all 0.5s ease;
+  filter: drop-shadow(0.2em 0.2em 0.1em black);
 }
 @media screen and (max-width: 720px) {
   .header__img {
@@ -111,9 +122,12 @@
   transition: all 0.5s ease;
   background-color: #d40f60;
   font-size: 1em;
+  text-shadow: 0.2em -0.2em 0.3em rgb(11, 11, 11);
 }
 .nav__a:active {
+  transition: all 0.5s ease;
   background-color: #d40f60;
+  font-size: 1em;
 }
 
 .main {
@@ -185,6 +199,7 @@
   user-select: none;
   position: absolute;
   bottom: 0vh;
+  background-color: rgb(11, 11, 11);
   animation: icon-animation 1s ease infinite;
   transition: all 0.5s ease;
   text-shadow: 1px 2px 3px black;
@@ -214,7 +229,7 @@
   color: #d40f60;
 }
 .section__a--head-icono:hover {
-  color: rgb(24, 24, 24);
+  color: white;
 }
 
 @keyframes icon-animation {
@@ -245,6 +260,15 @@
     grid-template-rows: 35vh 65vh;
     grid-gap: 0;
   }
+}
+
+.section__h2--info-text {
+  color: #005c81;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.section__h2--info-list {
+  color: #E90832;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .section__about-img {
@@ -295,6 +319,7 @@
   box-shadow: 0em 0em 0px 0em rgba(0, 92, 129, 0.4745098039);
 }
 .section__info-list {
+  padding: 0 1em;
   background-color: #E90832;
   color: white;
   text-align: center;
@@ -647,12 +672,12 @@
 }
 
 .section__h2--gallery-title {
-  color: #d40f60;
+  color: #005c81;
   font-size: 3em;
   margin: 0.1em 1em;
 }
 .section__container--gallery {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 92, 129, 0.7803921569);
   height: 100vh;
   display: grid;
   grid-template-columns: auto;
@@ -717,6 +742,8 @@
 }
 
 .gallery-figureBox {
+  padding-top: 1em;
+  background-color: rgb(11, 11, 11);
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;

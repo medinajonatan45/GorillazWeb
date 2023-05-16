@@ -50,6 +50,14 @@ $section-height-size:100vh;
     margin: 0;
     font-family: $primary-text-font;
 }
+*h2::selection, *li::selection{
+    background-color: $secundary-color;
+    color: $secundary-text-color;
+}
+*a::selection, *p::selection{
+    background-color: $quaternary-color;
+    color: $secundary-text-color;
+}
 // Header nav.................
 .header{
     background-color: $octonary-color;
@@ -84,6 +92,7 @@ $section-height-size:100vh;
         height: 100%;
         transition: all 0.5s ease;
         @include Screen-width(720px){width: 50%;}
+        filter: drop-shadow(0.2em 0.2em 0.1em black);
         
         &:hover{
             transition: all 0.5s ease;
@@ -131,9 +140,12 @@ $section-height-size:100vh;
             transition: all 0.5s ease;
             background-color: $secundary-color;
             font-size: 1em;
+            text-shadow: 0.2em -0.2em 0.3em $octonary-color;
         }
         &:active{
+            transition: all 0.5s ease;
             background-color: $secundary-color;
+            font-size: 1em;
         }
     }
 }
@@ -199,7 +211,7 @@ $section-height-size:100vh;
         user-select: none;
         position: absolute;
         bottom: 0vh;
-        // background-color: $septenary-color;
+        background-color: $octonary-color;
         animation: icon-animation 1s ease infinite;
         transition: all 0.5s ease;
         text-shadow: 1px 2px 3px black;
@@ -231,7 +243,7 @@ $section-height-size:100vh;
     color: $secundary-color;
 
     &:hover{
-        color: $septenary-color;
+        color: $secundary-text-color;
     }
 }
 @keyframes icon-animation {
@@ -248,6 +260,16 @@ $section-height-size:100vh;
     @include Grid-System(auto, 45vh 55vh, 0);
     @include Screen-width(960px){@include Grid-System(auto, 35vh 65vh, 0)}
 }
+.section{
+    &__h2--info-text{
+        color: $primary-color;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    &__h2--info-list{
+        color: $senary-color;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
 .section__about{
     &-img{
         text-align: center;
@@ -256,7 +278,6 @@ $section-height-size:100vh;
         overflow: hidden;
     }
     &-info{
-        // background-color: red;
         width: 97%;
         box-shadow: 0em -1em 1em 0em black;
         z-index: 99;
@@ -283,6 +304,7 @@ $section-height-size:100vh;
         }
     }
     &-list{
+        padding: 0 1em;
         background-color:$senary-color;
         color: $secundary-text-color;
         text-align: center;
@@ -297,7 +319,6 @@ $section-height-size:100vh;
 }
 .section__ul--info-list{
     padding-left: 0;
-    // background-color: $quinary-color;
     @include Flex-System(column, center, center, 0.2em, nowrap);
 }
 .section__img--about-img{
@@ -584,12 +605,14 @@ $section-height-size:100vh;
 .section{
     &__h2--gallery-title{
         // background-color: $quinary-color;
-        color: $secundary-color;
+        color: $primary-color;
         font-size:3em;
         margin: 0.1em 1em;
     }
     &__container--gallery{
-        background-color: rgba(0, 0, 0, 0.85);
+        // background-color: rgba(0, 0, 0, 0.85);
+        // background-color: #d40f61a4;
+        background-color: #005c81c7;
         height: 100vh;
         @include Grid-System(auto, 15vh 85vh, 0);
     }
@@ -637,7 +660,8 @@ $section-height-size:100vh;
     }
 }
 .gallery-figureBox{
-    // background-color: red;
+    padding-top: 1em;
+    background-color: $octonary-color;
     transition: all 0.5s ease;
     @include Flex-System(column, center, center, 0, nowrap);
     cursor: zoom-in;
