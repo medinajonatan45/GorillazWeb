@@ -3,7 +3,7 @@
 
 ## Descripción
 Sitio web de la banda Gorillaz realizado en HTML con base a la metodología BEM y las herramientas de SASS. Uso de javaScript para el funcionamiento de carrusel.  
-* [Ver en vivo]()
+* [Ver en vivo](https://medinajonatan45.github.io/GorillazWeb/)
 ## Autor 
 Jonatan Ruben
 * [Linkedin](https://www.linkedin.com/in/medinajonatan45/)
