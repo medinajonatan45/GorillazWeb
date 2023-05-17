@@ -285,7 +285,6 @@
 }
 .section__about-info {
   height: 80%;
-  background-color: yellow;
   width: 97%;
   box-shadow: 0em -1em 1em 0em black;
   z-index: 99;

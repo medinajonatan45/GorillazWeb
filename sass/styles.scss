@@ -281,19 +281,16 @@ $section-height-size:100vh;
     }
     &-info{
         height: 80%;
-        background-color: yellow;
         width: 97%;
         box-shadow: 0em -1em 1em 0em black;
         z-index: 99;
         padding: 2em 1em;
-        // margin: 0 9vw 0 1em;/**/
         @include Screen-width(960px){width: auto;}
         @include Grid-System(50% auto, auto, 2em);
         @include Screen-width(960px){@include Grid-System(80vw, auto auto, 1em);}
     }
 }
 .section__info{
-    
     &-text{
         padding: 0 1em;
         background-color:$primary-color;
