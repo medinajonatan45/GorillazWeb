@@ -426,9 +426,10 @@ $section-height-size:100vh;
 .section__img--member-photo{
     // object-fit: scale-down;
     height: 49.5vh;
-    margin-top: 1vh;
+    margin-top: 0.5em;
     filter: drop-shadow(10px 5px 1px black);
-    @include Screen-width(960px){height: 24.5vh;}
+    // @include Screen-width(960px){height: 24.5vh;}/**/
+    @include Screen-width(960px){height: 23.5vh;}
 }
 
 
