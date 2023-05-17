@@ -150,7 +150,7 @@
 
 .section--head {
   background-color: #005c81;
-  background-image: url(../img/background/plastic_beach.png);
+  background-image: url(../img/background/plastic_beach-1920x1080.png);
   background-position: center;
   background-size: cover;
 }
@@ -257,7 +257,7 @@
   .section__container--about {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 35vh 65vh;
+    grid-template-rows: 30vh 70vh;
     grid-gap: 0;
   }
 }
@@ -300,8 +300,8 @@
 @media screen and (max-width: 960px) {
   .section__about-info {
     display: grid;
-    grid-template-columns: 80vw;
-    grid-template-rows: 55% auto;
+    grid-template-columns: 70vw;
+    grid-template-rows: auto auto;
     grid-gap: 1em;
   }
 }
@@ -348,7 +348,7 @@
 }
 @media screen and (max-width: 720px) {
   .section__img--about-img {
-    transform: translateY(1em);
+    transform: translateY(-2em);
     object-fit: scale-down;
     width: 90vw;
   }

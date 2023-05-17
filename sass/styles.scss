@@ -169,7 +169,7 @@ $section-height-size:100vh;
 // Section 0: Head.................
 .section--head{
     background-color: $primary-color;
-    background-image: url(../img/background/plastic_beach.png);
+    background-image: url(../img/background/plastic_beach-1920x1080.png);
     background-position: center;
     background-size: cover;
 }
@@ -258,7 +258,7 @@ $section-height-size:100vh;
 }
 .section__container--about{
     @include Grid-System(auto, 45vh 55vh, 0);
-    @include Screen-width(960px){@include Grid-System(auto, 35vh 65vh, 0)}
+    @include Screen-width(960px){@include Grid-System(auto, 30vh 70vh, 0)}
 }
 .section{
     &__h2--info-text{
@@ -285,7 +285,7 @@ $section-height-size:100vh;
         margin: 0 9vw 0 1em;
         @include Screen-width(960px){width: auto;}
         @include Grid-System(50% auto, auto, 5vw);
-        @include Screen-width(960px){@include Grid-System(80vw, 55% auto, 1em);}
+        @include Screen-width(960px){@include Grid-System(70vw, auto auto, 1em);}
     }
 }
 .section__info{
@@ -325,7 +325,7 @@ $section-height-size:100vh;
     width: auto;
     height: 47vh;
     @include Screen-width(720px){
-        transform: translateY(1em);
+        transform: translateY(-2em);
         object-fit:scale-down;
         width: 90vw;
     }
