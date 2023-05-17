@@ -362,6 +362,7 @@
 
 .section__container--band {
   height: 100%;
+  width: 90%;
   background-color: yellowgreen;
   display: grid;
   grid-template-columns: 50% 50%;

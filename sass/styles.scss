@@ -339,6 +339,7 @@ $section-height-size:100vh;
 }
 .section__container--band{
     height: 100%;
+    width: 90%;
     background-color: yellowgreen;
     @include Grid-System(50% 50%, 50% 50%, 0em);
     @include Screen-width(960px){ @include Grid-System(90vw, 25% 25% 25% 25%, 0);}
