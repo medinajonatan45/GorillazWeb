@@ -429,8 +429,7 @@ $section-height-size:100vh;
     height: 49.5vh;
     margin-top: 0.5em;
     filter: drop-shadow(10px 5px 1px black);
-    // @include Screen-width(960px){height: 24.5vh;}/**/
-    @include Screen-width(960px){height: 23.5vh;}
+    @include Screen-width(960px){height: 24vh;}
 }
 
 
@@ -440,13 +439,12 @@ $section-height-size:100vh;
 }
 .section__container--discography{
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;/**/
 }
 .section__album{
-    // background-color: $primary-color;
     height: 100%;
     margin:0 5vw 0 5vw;
-    overflow: hidden;
+    // overflow: hidden;/**/
     @include Grid-System(50% 50%, 100%, 1em);
 
     &-img{
@@ -473,9 +471,9 @@ $section-height-size:100vh;
         transition: all 1s ease;
     }
     &--album-0{
-        height: 100vh;
+        height: 100%;
         margin:0;
-        @include Grid-System(auto 60%,100vh, 0);
+        @include Grid-System(auto 60%, 100vh, 0);
         // background-color: #005c81;
     }
     &-text--album-0{
@@ -570,6 +568,7 @@ $section-height-size:100vh;
 }
 .fp-controlArrow.fp-next, .fp-controlArrow.fp-prev{
     top:96%;
+    @include Screen-width(720px){ top:93%;}
 }
 .fp-controlArrow.fp-next{
     right: 1em;
@@ -878,6 +877,7 @@ $section-height-size:100vh;
 // Section Discography
 @media screen and (max-width:720px) {
     .section__album{
+        height: 90%;
         @include Grid-System(80vw ,40vh 60vh, 0);
     }
 }

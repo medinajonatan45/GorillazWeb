@@ -479,7 +479,7 @@
 }
 @media screen and (max-width: 960px) {
   .section__img--member-photo {
-    height: 23.5vh;
+    height: 24vh;
   }
 }
 
@@ -489,13 +489,11 @@
 
 .section__container--discography {
   height: 100%;
-  overflow: hidden;
 }
 
 .section__album {
   height: 100%;
   margin: 0 5vw 0 5vw;
-  overflow: hidden;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
@@ -527,7 +525,7 @@
   transition: all 1s ease;
 }
 .section__album--album-0 {
-  height: 100vh;
+  height: 100%;
   margin: 0;
   display: grid;
   grid-template-columns: auto 60%;
@@ -630,6 +628,11 @@
 
 .fp-controlArrow.fp-next, .fp-controlArrow.fp-prev {
   top: 96%;
+}
+@media screen and (max-width: 720px) {
+  .fp-controlArrow.fp-next, .fp-controlArrow.fp-prev {
+    top: 93%;
+  }
 }
 
 .fp-controlArrow.fp-next {
@@ -1031,6 +1034,7 @@
 }
 @media screen and (max-width: 720px) {
   .section__album {
+    height: 90%;
     display: grid;
     grid-template-columns: 80vw;
     grid-template-rows: 40vh 60vh;
