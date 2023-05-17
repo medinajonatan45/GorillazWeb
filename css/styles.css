@@ -153,6 +153,7 @@
   background-image: url(../img/background/plastic_beach-1920x1080.png);
   background-position: center;
   background-size: cover;
+  padding: 1em 0em;
 }
 
 .section__container--head {
@@ -174,7 +175,7 @@
   gap: 1em;
   flex-wrap: nowrap;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .section__head-title {
   user-select: none;
@@ -198,7 +199,7 @@
 .section__head-icono {
   user-select: none;
   position: absolute;
-  bottom: 0vh;
+  bottom: 0em;
   background-color: rgb(11, 11, 11);
   animation: icon-animation 1s ease infinite;
   transition: all 0.5s ease;
@@ -234,13 +235,13 @@
 
 @keyframes icon-animation {
   0% {
-    transform: translateY(20px);
+    transform: translateY(2em);
   }
   25% {
-    transform: translateY(0vh);
+    transform: translateY(0em);
   }
   100% {
-    transform: translateY(20px);
+    transform: translateY(2em);
   }
 }
 .section--box1 {
@@ -1011,8 +1012,9 @@
     width: 21em;
   }
   .section__img--head-img {
-    width: 50vh;
-    height: 79vh;
+    object-fit: scale-down;
+    width: 95%; /**/
+    height: 90%; /**/
   }
 }
 @media screen and (max-width: 480px) {
