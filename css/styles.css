@@ -362,10 +362,12 @@
 
 .section__container--band {
   height: 100%;
+  background-color: yellowgreen;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50vh 50vh;
+  grid-template-rows: 50% 50%;
   grid-gap: 0em;
+  overflow: hidden;
 }
 @media screen and (max-width: 960px) {
   .section__container--band {
@@ -421,9 +423,6 @@
   filter: drop-shadow(10px 10px 5px black);
 }
 
-.section__member {
-  overflow: hidden;
-}
 .section__member-name {
   font-size: calc(1em + 1.5vw);
 }
