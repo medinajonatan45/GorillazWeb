@@ -65,7 +65,7 @@ $section-height-size:100vh;
     height: 100%;
     width: 10vw;
     min-width: 2em;
-    z-index: 999;
+    z-index: 1;
     @include Grid-System(auto, 20vh auto, 0);
 
     &__logo{
@@ -100,22 +100,41 @@ $section-height-size:100vh;
         }
     }
     &__button{
-        background-color: $septenary-color;
-        color: $secundary-text-color;
+        background-color: $octonary-color;
+        color: $secundary-color;
         display: none;
         border: none;
-        // width: 100%;
+        width: 5em;
+        height: 5em;
+        border-radius: 10em;
+        transition: all 0.5s ease;
+
+        &:hover{
+            transition: all 0.5s ease;
+            background-color: $secundary-color;
+            color: $octonary-color;
+        }
+        &:active{
+            transition: all 0.5s ease;
+            background-color: $secundary-color;
+            color: $octonary-color;
+        }
+
+        @include Screen-width(720px){
+            display: block;
+            position: absolute;
+            top:90vh;
+            left:1em;
+        }
     }
     &__svg{
-        // background-color: $primary-color;
-        width: 100%;
-        height: 2.5em;
+        width: 60%;
+        height: 60%;
     }
 }
 .nav{
     font-weight: bold;
     &__ul{
-        // @include Flex-System(column, center, center, 6vh, nowrap);
         @include Flex-System(column, center, center, 0, nowrap);
         background-color:$octonary-color;
         padding: 0;
@@ -160,6 +179,7 @@ $section-height-size:100vh;
 
     &__container{
         margin-left:10vw;
+        @include Screen-width(720px){margin-left:0;}
     }
     &__li{
         list-style: none;
@@ -275,7 +295,7 @@ $section-height-size:100vh;
 .section__about{
     &-img{
         text-align: center;
-        @include Screen-width(720px){text-align: left;}
+        @include Screen-width(720px){text-align: center;}
         background:linear-gradient($senary-color, #000000);
         overflow: hidden;
     }
@@ -287,7 +307,7 @@ $section-height-size:100vh;
         padding: 2em 1em;
         @include Screen-width(960px){width: auto;}
         @include Grid-System(50% auto, auto, 2em);
-        @include Screen-width(960px){@include Grid-System(80vw, auto auto, 1em);}
+        @include Screen-width(720px){@include Grid-System(100%, auto auto, 1em);}
     }
 }
 .section__info{
@@ -339,10 +359,9 @@ $section-height-size:100vh;
 }
 .section__container--band{
     height: 100%;
-    width: 90%;
-    background-color: yellowgreen;
+    // background-color: yellowgreen;
     @include Grid-System(50% 50%, 50% 50%, 0em);
-    @include Screen-width(960px){ @include Grid-System(90vw, 25% 25% 25% 25%, 0);}
+    @include Screen-width(960px){ @include Grid-System(100%, 25% 25% 25% 25%, 0);}
     overflow: hidden;
 }
 .section__background-filter{
@@ -485,7 +504,7 @@ $section-height-size:100vh;
         background-image: url(../img/background/gorillaz-1.png);
         background-size: cover;
         // background-position:center;
-        @include Screen-width(720px){width: 90vw;}
+        @include Screen-width(720px){width: 100%;}
         padding: 0em;
     }
 }
@@ -621,12 +640,11 @@ $section-height-size:100vh;
         @include Grid-System(auto, 15vh 85vh, 0);
     }
     &__buttons-nav{
-        // background-color: purple;
         @include Flex-System(row, space-around, flex-start, nowrap, 0);
+        @include Screen-width(720px){justify-content: center; gap: 3em;}
     }
     &__button{
         color: $secundary-color;
-        // background-color: transparent;
         background-color: $octonary-color;
         font-size: 2.5em;
         border: 0;
@@ -678,7 +696,7 @@ $section-height-size:100vh;
         height: 60vh;
         width: 20em;
         object-fit:scale-down;
-    }
+        @include Screen-width(720px){width: 16em;object-fit:scale-down;}}
     &__figcaption{
         padding: 0.5em;
         // background-color: orange;
@@ -689,7 +707,6 @@ $section-height-size:100vh;
         color: $secundary-text-color;
     }
 }
-
 .gallery-figureBox.activo{
     background-color: rgba(0, 0, 0, 0.95);
     height: 105vh;
@@ -717,7 +734,6 @@ $section-height-size:100vh;
     transition: all 0.5s ease;
 }
 
-
 // Section Box 4: Footer .................
 .footer{
     background-color: $septenary-color;
@@ -728,7 +744,7 @@ $section-height-size:100vh;
         height: 35vh;
         // background-color: greenyellow;
         @include Grid-System(100%, 70% 30%, 0);
-        @include Screen-width(720px){@include Grid-System(90vw, 70% 30%, 0);}
+        @include Screen-width(720px){@include Grid-System(100%, 70% 30%, 0);}
     }
     &--background{
         height: 65vh;
@@ -808,17 +824,14 @@ $section-height-size:100vh;
 // Header Nav
 @media screen and (max-width:720px) {
     .header{
-        @include Grid-System(auto, 10em 3em auto, 0);
+        background:transparent;
 
-        &__button{
-            // background-color: red;
-            display: block;
-            @include Flex-System(row, flex-start ,center , 0, nowrap);
-        }
-        &__svg{
-            width: 7vw;
+        @include Grid-System(auto, auto, 0);
+        &__logo{
+            display: none;
         }
     }
+
     .nav{
         width: 0vw;
         height: 100%;
@@ -834,6 +847,7 @@ $section-height-size:100vh;
         }
         &.activo{
             width: 100vw;
+            height: 100%;
         }
     }
 }
@@ -857,7 +871,8 @@ $section-height-size:100vh;
     .section__img{
         &--head-title{
             object-fit:scale-down;
-            width: 21em;
+            // width: 21em;
+            width: 95%;
         }
         &--head-img{
             transform: translateY(-1em);
@@ -878,19 +893,6 @@ $section-height-size:100vh;
 @media (max-width:720px) {
     .section__album{
         height: 90%;
-        @include Grid-System(80vw ,40vh 60vh, 0);
-    }
-}
-// Section Gallery
-@media (max-width:720px) {
-    .section__gallery{
-        &-content{
-            width: 90vw;
-        }
-    }
-    .gallery-figureBox__img{
-        height: 60vh;
-        width: 16em;
-        object-fit:scale-down;
+        @include Grid-System(100%, 40vh 60vh, 0);
     }
 }
