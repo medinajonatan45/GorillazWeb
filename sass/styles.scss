@@ -16,7 +16,7 @@ $primary-text-font:arial;
 $secundary-text-font: 'Darumadrop One', cursive;
 
 // **** Medidas ****
-$section-height-size:100svh;
+$section-height-size:100vh;
 
 // Mixin___________________________________
 // -- Grid --
@@ -192,12 +192,10 @@ $section-height-size:100svh;
     background-image: url(../img/background/plastic_beach-1920x1080.png);
     background-position: center;
     background-size: cover;
-    // padding-top: 1.5em;
+    padding-top: 1.5em;
 }
 .section__container--head{
     @include Flex-System(column, space-around,center, 0, nowrap);
-    min-height:100vh;
-    background-color: #0000006d;
 }
 .section__head{
     &-info{
@@ -450,10 +448,10 @@ $section-height-size:100svh;
 }
 .section__img--member-photo{
     // object-fit: scale-down;
-    height: 49.5svh;
+    height: 49.5vh;
     margin-top: 0.5em;
     filter: drop-shadow(10px 5px 1px black);
-    @include Screen-width(960px){height: 24svh;}
+    @include Screen-width(960px){height: 24vh;}
 }
 
 
@@ -632,15 +630,13 @@ $section-height-size:100svh;
 }
 .section{
     &__h2--gallery-title{
-        // background-color: $quinary-color;
-        color: $primary-color;
+        color: $secundary-color;
         font-size:3em;
         margin: 0.1em 1em;
     }
     &__container--gallery{
         // background-color: rgba(0, 0, 0, 0.85);
-        // background-color: #d40f61a4;
-        background-color: #005c81c7;
+        background-color: #d40f61e4;
         height: 100%;
         @include Grid-System(auto, 15vh 85vh, 0);
     }
@@ -758,7 +754,7 @@ $section-height-size:100svh;
         background-image: url(../img/background/gorillaz_baby-queen.jpg);
         background-size:cover;
         background-repeat: no-repeat;
-        background-position:top;
+        background-position:center;
     }
 }
 .footer{

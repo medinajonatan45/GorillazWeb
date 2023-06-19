@@ -161,7 +161,7 @@
 }
 
 .section {
-  min-height: 100svh;
+  min-height: 100vh;
 }
 .section__container {
   margin-left: 10vw;
@@ -180,6 +180,7 @@
   background-image: url(../img/background/plastic_beach-1920x1080.png);
   background-position: center;
   background-size: cover;
+  padding-top: 1.5em;
 }
 
 .section__container--head {
@@ -189,8 +190,6 @@
   align-items: center;
   gap: 0;
   flex-wrap: nowrap;
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4274509804);
 }
 
 .section__head-info {
@@ -503,13 +502,13 @@
 }
 
 .section__img--member-photo {
-  height: 49.5svh;
+  height: 49.5vh;
   margin-top: 0.5em;
   filter: drop-shadow(10px 5px 1px black);
 }
 @media (max-width: 960px) {
   .section__img--member-photo {
-    height: 24svh;
+    height: 24vh;
   }
 }
 
@@ -709,12 +708,12 @@
 }
 
 .section__h2--gallery-title {
-  color: #005c81;
+  color: #d40f60;
   font-size: 3em;
   margin: 0.1em 1em;
 }
 .section__container--gallery {
-  background-color: rgba(0, 92, 129, 0.7803921569);
+  background-color: rgba(212, 15, 97, 0.8941176471);
   height: 100%;
   display: grid;
   grid-template-columns: auto;
@@ -897,7 +896,7 @@
   background-image: url(../img/background/gorillaz_baby-queen.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
 }
 
 .footer__items {
