@@ -276,7 +276,7 @@
 }
 
 .section__container--about {
-  min-height: 100vh;
+  height: 100svh;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 45% 55%;
