@@ -195,6 +195,7 @@ $section-height-size:100vh;
     padding-top: 1.5em;
 }
 .section__container--head{
+    height: 100%;
     @include Flex-System(column, space-around,center, 0, nowrap);
 }
 .section__head{
