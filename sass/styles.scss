@@ -175,7 +175,7 @@ $section-height-size:100vh;
     @include Grid-System(auto, auto, 0 );
 }
 .section{
-    height: $section-height-size;
+    min-height: $section-height-size;
 
     &__container{
         margin-left:10vw;
@@ -278,7 +278,7 @@ $section-height-size:100vh;
     background-color: black;
 }
 .section__container--about{
-    height: 100vh;
+    min-height: 100vh;
     @include Grid-System(auto, 45% 55%, 0);
     @include Screen-width(960px){@include Grid-System(auto, 30% 70%, 0)}
 }

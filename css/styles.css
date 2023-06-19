@@ -161,7 +161,7 @@
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
 }
 .section__container {
   margin-left: 10vw;
@@ -276,7 +276,7 @@
 }
 
 .section__container--about {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 45% 55%;
