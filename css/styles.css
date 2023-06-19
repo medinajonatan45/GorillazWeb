@@ -760,6 +760,14 @@
   grid-template-rows: 90% 10%;
   grid-gap: 0;
 }
+@media (max-width: 720px) {
+  .section__gallery-content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 25%;
+    grid-gap: 0;
+  }
+}
 .section__gallery-items {
   user-select: none;
   display: flex;
@@ -803,6 +811,7 @@
 @media (max-width: 720px) {
   .gallery-figureBox__img {
     width: 16em;
+    height: 45vh;
     object-fit: scale-down;
   }
 }

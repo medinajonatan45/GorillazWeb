@@ -668,6 +668,7 @@ $section-height-size:100vh;
     &-content{
         // background-color: $primary-color;
         @include Grid-System(100%, 90% 10%, 0);
+        @include Screen-width(720px){ @include Grid-System(100%, 75% 25%, 0);}
     }
     &-items{
         user-select: none;
@@ -696,7 +697,7 @@ $section-height-size:100vh;
         height: 60vh;
         width: 20em;
         object-fit:scale-down;
-        @include Screen-width(720px){width: 16em;object-fit:scale-down;}}
+        @include Screen-width(720px){width: 16em;height:45vh;object-fit:scale-down;}}
     &__figcaption{
         padding: 0.5em;
         // background-color: orange;
